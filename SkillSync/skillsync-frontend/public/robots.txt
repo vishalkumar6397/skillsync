@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://skill-sync-sage-nu.vercel.app/sitemap.xml
