@@ -1,14 +1,26 @@
 from .base import *
 
+# DEBUG = False
+
+# ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
+
+# # ===============================
+# # CORS (PRODUCTION)
+# # ===============================
+# CORS_ALLOWED_ORIGINS = [
+#     "https://skill-sync-sage-nu.vercel.app",  
+# ]
+
+# CORS_ALLOW_CREDENTIALS = True
+
 DEBUG = False
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
+ALLOWED_HOSTS = ['*']
 
-# ===============================
-# CORS (PRODUCTION)
-# ===============================
-CORS_ALLOWED_ORIGINS = [
-    "https://skill-sync-sage-nu.vercel.app",  
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    ...
 ]
-
-CORS_ALLOW_CREDENTIALS = True
