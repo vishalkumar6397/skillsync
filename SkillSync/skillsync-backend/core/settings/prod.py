@@ -31,7 +31,9 @@ from .base import *
 
 DEBUG = False
 
+
 ALLOWED_HOSTS = [
+    "skillsync-1-sdc8.onrender.com",
     "skillsync-2-xeu9.onrender.com",
 ]
 
@@ -40,9 +42,11 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
+    "https://skillsync-1-sdc8.onrender.com",
     "https://skillsync-2-xeu9.onrender.com",
     "https://skill-sync-sage-nu.vercel.app",
 ]
+
 
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
